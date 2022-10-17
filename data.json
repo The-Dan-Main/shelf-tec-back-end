@@ -4,7 +4,7 @@
         "title": "HP Envy Inspire 7220e",
         "price": 149.00,
         "description": "Work, learn and create with a printer that leaves nothing to be desired - whether high-quality photos or crisp documents. Choose HP+ and stay connected and ready to print with the smart printing system virtually anywhere. This is an HP+ enabled printer. Choose HP+ at product setup to take advantage of the benefits. HP+ requires an HP account, an uninterrupted Internet connection, and the exclusive use of Original HP printer cartridges throughout the life of the printer. More information at: http://www.hp.com/plus-faq",
-        "category": "peripherals",
+        "category": "Peripherals",
         "image": "https://www.digitec.ch/im/Files/6/8/6/4/5/0/3/5/image.jpg",
         "rating": {
             "rate": 3.9,
@@ -13,94 +13,10 @@
     },
     {
         "id": 2,
-        "title": "Mens Casual Premium Slim Fit T-Shirts ",
-        "price": 22.3,
-        "description": "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
-        "category": "men's clothing",
-        "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
-        "rating": {
-            "rate": 4.1,
-            "count": 259
-        }
-    },
-    {
-        "id": 3,
-        "title": "Mens Cotton Jacket",
-        "price": 55.99,
-        "description": "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.",
-        "category": "men's clothing",
-        "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
-        "rating": {
-            "rate": 4.7,
-            "count": 500
-        }
-    },
-    {
-        "id": 4,
-        "title": "Mens Casual Slim Fit",
-        "price": 15.99,
-        "description": "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
-        "category": "men's clothing",
-        "image": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
-        "rating": {
-            "rate": 2.1,
-            "count": 430
-        }
-    },
-    {
-        "id": 5,
-        "title": "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
-        "price": 695,
-        "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
-        "category": "jewelery",
-        "image": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
-        "rating": {
-            "rate": 4.6,
-            "count": 400
-        }
-    },
-    {
-        "id": 6,
-        "title": "Solid Gold Petite Micropave ",
-        "price": 168,
-        "description": "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.",
-        "category": "jewelery",
-        "image": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
-        "rating": {
-            "rate": 3.9,
-            "count": 70
-        }
-    },
-    {
-        "id": 7,
-        "title": "White Gold Plated Princess",
-        "price": 9.99,
-        "description": "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...",
-        "category": "jewelery",
-        "image": "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
-        "rating": {
-            "rate": 3,
-            "count": 400
-        }
-    },
-    {
-        "id": 8,
-        "title": "Pierced Owl Rose Gold Plated Stainless Steel Double",
-        "price": 10.99,
-        "description": "Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel",
-        "category": "jewelery",
-        "image": "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
-        "rating": {
-            "rate": 1.9,
-            "count": 100
-        }
-    },
-    {
-        "id": 9,
         "title": "WD 2TB Elements Portable External Hard Drive - USB 3.0 ",
         "price": 64,
         "description": "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system",
-        "category": "electronics",
+        "category": "Hard Drives",
         "image": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
         "rating": {
             "rate": 3.3,
@@ -108,11 +24,11 @@
         }
     },
     {
-        "id": 10,
+        "id": 3,
         "title": "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s",
         "price": 109,
         "description": "Easy upgrade for faster boot up, shutdown, application load and response (As compared to 5400 RPM SATA 2.5” hard drive; Based on published specifications and internal benchmarking tests using PCMark vantage scores) Boosts burst write performance, making it ideal for typical PC workloads The perfect balance of performance and reliability Read/write speeds of up to 535MB/s/450MB/s (Based on internal testing; Performance may vary depending upon drive capacity, host device, OS and application.)",
-        "category": "electronics",
+        "category": "Hard Drives",
         "image": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
         "rating": {
             "rate": 2.9,
@@ -120,11 +36,11 @@
         }
     },
     {
-        "id": 11,
+        "id": 4,
         "title": "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5",
         "price": 109,
         "description": "3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking & Correction) to provide the optimized performance and enhanced reliability.",
-        "category": "electronics",
+        "category": "Hard Drives",
         "image": "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
         "rating": {
             "rate": 4.8,
@@ -132,11 +48,11 @@
         }
     },
     {
-        "id": 12,
+        "id": 5,
         "title": "WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive",
         "price": 114,
         "description": "Expand your PS4 gaming experience, Play anywhere Fast and easy, setup Sleek design with high capacity, 3-year manufacturer's limited warranty",
-        "category": "electronics",
+        "category": "Hard Drives",
         "image": "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg",
         "rating": {
             "rate": 4.8,
@@ -144,11 +60,11 @@
         }
     },
     {
-        "id": 13,
+        "id": 6,
         "title": "Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin",
         "price": 599,
         "description": "21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync technology. No compatibility for VESA Mount Refresh Rate: 75Hz - Using HDMI port Zero-frame design | ultra-thin | 4ms response time | IPS panel Aspect ratio - 16: 9. Color Supported - 16. 7 million colors. Brightness - 250 nit Tilt angle -5 degree to 15 degree. Horizontal viewing angle-178 degree. Vertical viewing angle-178 degree 75 hertz",
-        "category": "electronics",
+        "category": "Notebooks + PCs",
         "image": "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg",
         "rating": {
             "rate": 2.9,
@@ -156,11 +72,11 @@
         }
     },
     {
-        "id": 14,
+        "id": 7,
         "title": "Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED ",
         "price": 999.99,
         "description": "49 INCH SUPER ULTRAWIDE 32:9 CURVED GAMING MONITOR with dual 27 inch screen side by side QUANTUM DOT (QLED) TECHNOLOGY, HDR support and factory calibration provides stunningly realistic and accurate color and contrast 144HZ HIGH REFRESH RATE and 1ms ultra fast response time work to eliminate motion blur, ghosting, and reduce input lag",
-        "category": "electronics",
+        "category": "TV + Home cinema",
         "image": "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg",
         "rating": {
             "rate": 2.2,
@@ -168,15 +84,243 @@
         }
     },
     {
-        "id": 15,
-        "title": "BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats",
-        "price": 56.99,
-        "description": "Note:The Jackets is US standard size, Please choose size as your usual wear Material: 100% Polyester; Detachable Liner Fabric: Warm Fleece. Detachable Functional Liner: Skin Friendly, Lightweigt and Warm.Stand Collar Liner jacket, keep you warm in cold weather. Zippered Pockets: 2 Zippered Hand Pockets, 2 Zippered Pockets on Chest (enough to keep cards or keys)and 1 Hidden Pocket Inside.Zippered Hand Pockets and Hidden Pocket keep your things secure. Humanized Design: Adjustable and Detachable Hood and Adjustable cuff to prevent the wind and water,for a comfortable fit. 3 in 1 Detachable Design provide more convenience, you can separate the coat and inner as needed, or wear it together. It is suitable for different season and help you adapt to different climates",
-        "category": "women's clothing",
-        "image": "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
+        "id": 8,
+        "title": "Nintendo Switch (OLED model) White",
+        "price": 329,
+        "description": "Nintendo Switch (OLED model) features a 7-inch OLED screen with a narrower bezel. The screen's intense colours and high contrast deliver an immersive gaming experience in handheld and tabletop modes - whether you're racing at breathtaking speeds or outrunning opponents. Flip out the stand, hand another player a controller, face the screen together and play against or with each other when and where you want. Adjust the Nintendo Switch (OLED model) wide adjustable stand to your desired viewing angle for a comfortable gaming experience in tabletop mode. The Nintendo Switch (OLED model) station has two USB ports, an HDMI port for connecting to a TV and a LAN port for a stable internet connection in TV mode. Nintendo Switch (OLED model) has 64 GB of internal storage space. The available storage space can be expanded with a compatible microSD Card (sold separately). Download your favourite games and play them when and where you want. Experience clear sound when playing in handheld or tabletop mode",
+        "category": "Gaming + VR",
+        "image": "https://www.digitec.ch/im/Files/4/7/1/9/1/9/7/3/CI_NSwitch_features_top.png",
         "rating": {
-            "rate": 2.6,
-            "count": 235
+            "rate": 4.9,
+            "count": 482
+        }
+    },
+    {
+        "id": 9,
+        "title": "LG OLED55C17",
+        "price": 1006,
+        "description": "LG Oled TVs are a feast for the eyes. Self-luminous pixels allow for thoroughly spectacular picture quality and offer virtually endless design possibilities, while the new cutting-edge technologies provide an unprecedented level of entertainment. Everything you love about TV - superior in every way. This device supports playback of premium HDR content and is compatible with HDR formats such as HDR10 Pro, HLG Pro as well as Dolby Vision. This technology optimizes the picture quality scene by scene, so you can enjoy a vivid and lifelike display with rich contrasts. The processor automatically adjusts the picture by turning off motion smoothing. This creates an authentic cinematic effect. Watch movies the way they were intended by the filmmakers and experience true cinematic excitement. Let the industry experts convince you. Oled stands for Organic Light Emitting Diode, which means organic light emitting diode. Compared to conventional LCD TVs, models with self-luminous organic light-emitting diodes offer significantly better contrast values and very good colour representation. In addition, OLED technology allows for an even flatter design, shorter response times and is more efficient and ecological due to its lower energy consumption. The clear user interface of LG's webOS operating system makes operating your TV simple and intuitive. With the nifty Launcher Bar, you can easily find your way around the variety of content from popular entertainment providers and get even faster access to your favourite shows, apps and streaming offers thanks to programmable Quick Access Keys and the dedicated Netflix button.",
+        "category": "TV + Home cinema",
+        "image": "https://www.digitec.ch/im/Files/4/3/6/0/3/9/2/7/LG%20OLED%20C1%20in%2055%20Zoll%20-%20Design%20B%202021%2001%20-%20MAIN.jpg?",
+        "rating": {
+            "rate": 4.6,
+            "count": 123
+        }
+    },
+    {
+        "id": 10,
+        "title": "Epson EcoTank ET-2820",
+        "price": 232,
+        "description": "Cut ink costs by up to 90% with this EcoTank printer. The included ink bottles make it easy to refill the built-in large capacity ink tanks. With no cartridges to replace, flexible connectivity and double-sided printing, the printer is perfect for those looking for high-quality prints at an incredibly low cost per page.",
+        "category": "Peripherals",
+        "image": "https://www.digitec.ch/im/Files/4/9/5/8/3/9/1/3/b37a7110-0505-4e73-8407-4b28d8e705c8.jpg",
+        "rating": {
+            "rate": 4.25,
+            "count": 26
+        }
+    },
+    {
+        "id": 11,
+        "title": "Apple iPhone 14 Pro",
+        "price": 1299,
+        "description": "iPhone 14 Pro. Capture incredible detail with the 48 MP main camera. Experience iPhone in a whole new way with Dynamic Island and Always On Display. And Accident Detection1, a new safety feature, calls for help when you can't.",
+        "category": "Smartphones + Tablets",
+        "image": "https://www.digitec.ch/im/Files/6/8/2/2/7/6/2/6/iPhone_14_Pro_Space_Black_PDP_Image_Position-1a__WWEN.jpg",
+        "rating": {
+            "rate": 4.5,
+            "count": 53
+        }
+    },
+    {
+        "id": 12,
+        "title": "Lenovo ThinkPad E15 Gen",
+        "price": 1099,
+        "description": "The Lenovo ThinkPad E15 Gen. 2 delivers enduring performance and reliability where you need it. With its eleventh-generation Core i5 processor, 16GB of DDR4 memory, and integrated Iris-Xe graphics solution, it has performance reserves that go far beyond the needs of everyday office and web applications - for up to 10.8 hours on a single charge. Thanks to various security features and authentication options like TPM, fingerprint scanner and an IR-enabled webcam (facial recognition login), your confidential data is kept safe. This notebook features the popular Lenovo UltraNav pointer unit, giving you two ways to control the mouse pointer. You can either use the touchpad as usual or the integrated TrackPoint. This is a kind of small joystick in the keyboard's center. It also takes over the mouse's function - but with the advantage that you don't have to take your hand off the keyboard during work or restart it several times during long mouse movements.",
+        "category": "Notebooks + PCs",
+        "image": "https://www.digitec.ch/im/Files/5/2/7/4/8/7/2/1/ThinkPad_E15_Gen_2_Intel_CT1_01.png",
+        "rating": {
+            "rate": 0,
+            "count": 0
+        }
+    },
+    {
+        "id": 13,
+        "title": "Samsung Galaxy A53 5G",
+        "price": 329,
+        "description": "The Galaxy A53 5G offers you an outstanding multimedia experience with its crystal clear 120 Hz sAMOLED display and versatile cameras. Take beautiful photos with the quad camera, or take full advantage of the performance to play your favorite game. ",
+        "category": "Smartphones + Tablets",
+        "image": "https://www.digitec.ch/im/Files/6/0/2/1/5/5/3/9/Samsung_Galaxy_A53_5G_SM-A536B_Awesome_Black_Single_Cutout_RGB.png",
+        "rating": {
+            "rate": 4.5,
+            "count": 212
+        }
+    },
+    {
+        "id": 14,
+        "title": "Sony Playstation 5 + GT 7 + Horizon Forbidden West + Wireless Controller Bundle",
+        "price": 759,
+        "description": "The PS5 console opens up a whole new world of gaming possibilities you never expected. Enjoy lightning-fast loading with an ultra-fast SSD, a more realistic gaming experience with haptic feedback, adaptive trigger buttons and 3D audio, and a whole new generation of incredible PlayStation games. Mind-blowing speed Harness the power of the specially designed CPU, GPU and SSD with integrated I/O and experience how this PlayStation console is revolutionising the gaming world. Unique games Be mesmerised by the incredible graphics and experience the new features of the PS5. Breathtaking gaming experiences Discover a more immersive gaming experience with support for haptic feedback, adaptive triggers and 3D audio technology.",
+        "category": "Gaming + VR",
+        "image": "https://www.digitec.ch/im/Files/6/8/4/9/7/6/5/1/Sony%20Playstation%205%20%20GT%207%20%20Horizon%20Forbidden%20West%20%20Wireless%20Controller%20Bundle.jpg",
+        "rating": {
+            "rate": 4.5,
+            "count": 3
+        }
+    },
+    {
+        "id": 15,
+        "title": "Samsung QE75QN90A",
+        "price": 1999,
+        "description": "The Samsung QN90 is the spearhead of the Samsung 4K line up. Thanks to the Quantum Matrix technology, it produces an extremely deep black and rich colors. The Mini LED's are 40x smaller than the usual LED's, so a high number of these LED's can be installed space-saving and creates extreme contrasts. In addition, they allow a very thin and visually appealing design. The Quantum Dot technology produces a DCI-P3 color space coverage of 100%, certified by the VDE (Association of German Electrical Engineers). With a peak brightness of 2,000 nits, the QN90 can reproduce HDR material in an impressive manner, just as the director intended. The built-in Neo Quantum processor upscales content that is not 4K with dynamic algorithms. The ability to update these algorithms on the processor guarantees that a wide variety of content is upscaled perfectly. For gamers, the QN90 offers HDMI 2.1 with 4K@120Hz, VRR (Variable Refresh Rate) and HFR (High Refresh Rate). The built-in QSymphony technology allows you to connect a Samsung Q-series soundbar and listen to the sound from the TV and soundbar simultaneously. This greatly enhances the spatial sound experience.",
+        "category": "TV + Home cinema",
+        "image": "https://www.digitec.ch/im/Files/4/2/3/4/4/1/4/1/QN65QN90AAFXZA_001_Front1_Titan-Black.jpg",
+        "rating": {
+            "rate": 4.7,
+            "count": 205
+        }
+    },
+    {
+        "id": 16,
+        "title": "Google Pixel 6a",
+        "price": 399,
+        "description": "Google Pixel 6a Charcoal (GA02998-GB).",
+        "category": "Smartphones + Tablets",
+        "image": "https://www.digitec.ch/im/Files/6/7/7/9/9/4/9/1/Google_Pixel-6a_black_digitec-galaxus.jpg",
+        "rating": {
+            "rate": 4.2,
+            "count": 75
+        }
+    },
+    {
+        "id": 17,
+        "title": "MSI RTX3090 TI GAMING X TRIO 24G",
+        "price": 1365,
+        "description": "24GB GDDR6.",
+        "category": "Graphics card",
+        "image": "https://www.digitec.ch/im/Files/6/1/4/2/5/0/3/3/LHj28nScfnttxWk.png",
+        "rating": {
+            "rate": 4.2,
+            "count": 4
+        }
+    },
+    {
+        "id": 18,
+        "title": "Logitech Ergo K860",
+        "price": 91.40,
+        "description": "Logitech's Ergo K860 is an ergonomic keyboard for a healthy and natural posture while typing. The keyboard's advanced ergonomic design promotes a more relaxed typing posture by reducing wrist flexion by 25% and providing 54% more wrist support. The curved, split keyboard panel reduces muscle strain on the wrists and forearms, while the padded wrist rest provides comfort and an optimal ergonomic positio Thanks to adjustable wrist rest angle, natural posture is maintained while sitting as well as standing. The short key travel also promotes smooth and precise typing on the keyboard. The keyboard can be connected to up to three devices via Bluetooth and USB receiver and can be conveniently switched between them at the touch of a button. The plastic parts in Ergo K860 Graphite are made of 71% recycled plastic. Uses FSC-certified paper for responsible packaging. Enjoy ample freedom of movement without the hassle of tangled cables: USB wireless input devices wirelessly connect to the receiver, which you plug into a free USB port. Enjoy ample freedom of movement without the hassle of tangled cables: this input device establishes a wireless direct connection to your Bluetooth-enabled computer. Unlike other wireless devices, no USB receiver is needed for this. This way, you keep your USB ports free for other peripherals.",
+        "category": "Peripherals",
+        "image": "https://www.digitec.ch/im/Files/3/8/3/5/6/6/2/6/184560765_xxl3.jpg",
+        "rating": {
+            "rate": 4.5,
+            "count": 483
+        }
+    },
+    {
+        "id": 19,
+        "title": "Netgear RAX120 Nighthawk (5G, WiFi 6)",
+        "price": 285,
+        "description": "The Netgear AX6000-12 Stream WLAN Router Nighthawk AX12 is based on the latest WLAN 6 (802.11ax) standard with four times the data capacity to meet today's and tomorrow's growing home network requirements. The fast combined WLAN speeds up to 6 Gbps and the AX-optimized 64-bit 2.2 GHz quad-core processor supports smart home applications, smooth 4K UHD streaming, online gaming and more. AX WLAN features Orthogonal Frequency Division Multiple Access (OFDMA), which dramatically increases network capacity. In addition, eight high-performance antennas (in the wings) on the router amplify the WLAN signals for maximum range and reliable coverage. The Netegar Nighthawk AX6000 12-Stream Router is also the first home router with a 5G multi-gigabit port. Orthogonal frequency division multiple access (OFDMA) AX WLAN's Orthogonal Frequency Division Multiple Access (OFDMA) function manages WLAN traffic much more efficiently by transferring data from multiple sources rather than waiting for each device's data to get to its turn. This results in more efficient use of airtime, reduced latency and higher bandwidth to add more devices to your network. state-of-the-art industrial design The next generation Netgear Nighthawk AX12 router design houses eight high performance antennas under the wings. The antennas are optimally positioned for best WLAN performance and extend the strong and reliable WLAN coverage for indoor and outdoor use. Multi-Gigabit Ethernet Port 5G/2.5G/1G The Netgear AX6000 Nighthawk Router has a Multi-Gigabit Ethernet Port 5G/2.5G/1G. This achieves 5 times the wired speed compared to the typical Gigabit port. Works with Amazon Alexa and Google Assistant The Netgear AX6000 Nighthawk Router works with Amazon Alexa and Google Assistant. How to control your Netgear WLAN network with simple voice commands.",
+        "category": "Bridges + routers",
+        "image": "https://www.digitec.ch/im/Files/2/7/1/4/2/6/8/9/Netgear-Dual-Band-WiFi-Router-AX6000-Nighthawk-AX12-N-007.xxl3.jpg",
+        "rating": {
+            "rate": 3.8,
+            "count": 54
+        }
+    },
+    {
+        "id": 20,
+        "title": "Intel Core i9-13900K",
+        "price": 690,
+        "description": "13th Gen Intel® Core™ i9-13900K desktop processor. Featuring Intel® Adaptive Boost Technology, Intel® Thermal Velocity Boost, Intel® Turbo Boost Max Technology 3.0, and PCIe 5.0 & 4.0 support, DDR5 and DDR4 support, unlocked 13th Gen Intel® Core™ i9 desktop processors are optimised for enthusiast gamers and serious creators and help deliver high performance. Compatible with Intel® 700 Series and Intel® 600 Series chipset based motherboards. 125W Processor Base Power.",
+        "category": "Processors",
+        "image": "https://www.digitec.ch/im/Files/6/9/0/8/5/3/6/9/en-box-t4-i9k-13th-left-transparent_4000pixels.png",
+        "rating": {
+            "rate": 0,
+            "count": 0
+        }
+    },
+    {
+        "id": 21,
+        "title": "Aukey USB A – USB Type-C 5er Pack",
+        "price": 26.70,
+        "description": "The advantages of USB C are manifold compared to the previous generation. Synchronisation of charging and data transfer: USB C to USB 3.0 up to 5 Gbps, which is 10 times faster than USB 2.0 High quality material: Nylon packed even after repeated folding will not be damaged, it is by the high quality. Free branch design and corrosion resistant and durable aluminium housing. USB C Features: Non-directional, which can be done either before or after plugging in, improving the usability of this interface. Suitable models: Samsung Galaxy Note 7, OnePlus 2, Huawei P9, MacBook 12 with Retina display, MacBook A1534, Google Chromebook Pixel, Nokia N1 Tablet, OnePlus 2, Computer, Tablets, Mobile phones. What you get: 1 x Aukey type C with USB 3.0 cable to[5 Pack : 2 m 1 + 1 m 3 + 0.3 m 1] Nylon (grey).",
+        "category": "Peripherals",
+        "image": "https://www.digitec.ch/im/Files/7/7/1/7/6/0/7/71GdNUGDzqL._SL1500_.jpg",
+        "rating": {
+            "rate": 4.2,
+            "count": 1195
+        }
+    },
+    {
+        "id": 22,
+        "title": "AOC C27G2ZU/BK",
+        "price": 199,
+        "description": "With a 240Hz refresh rate, 0.5ms response time and low input delay, the AOC C27G2ZU offers absolutely smooth performance. Thanks to its curved design, height adjustment and swivel, the monitor can be adapted to individual needs. It is compatible with FreeSync Premium and G-Sync. A pixel response time of 0.5 ms means speed without compromise for a better gaming experience. Action scenes with fast movements and dramatic transitions are implemented smoothly and without disturbing ghosting effects. Don't let a slow monitor stop you on your way to success.",
+        "category": "Peripherals",
+        "image": "https://www.digitec.ch/im/Files/3/6/2/5/9/4/4/8/140741345_xxl3.jpg",
+        "rating": {
+            "rate": 4.9,
+            "count": 207
+        }
+    },
+    {
+        "id": 23,
+        "title": "Viewsonic M2",
+        "price": 640,
+        "description": "This smart LED Beamer M2 offers various features for a device size smaller than A4. These include: Full HD resolution, 1,200 LED lumens, brilliant colours thanks to Cinema SuperColor+ technology and two Harman Kardon speakers for powerful sound. Projection in Full HD 1080p (1920 x 1080) resolution delivers clear content and ultra-sharp picture quality. Harman/Kardon's proprietary dual speakers deliver vibrant and powerful sound for an all-around immersive experience, whether you're watching movies, listening to a live concert or showcasing your creative artwork. You can output the sound of a film or an exciting game from the beamer via Bluetooth to your own Bluetooth headphones, taking a break from the outside world and immersing yourself in your own on-screen fun. Or the other way around, connect to another Bluetooth soundbar or subwoofer to add to the atmosphere. With the mobile M2 Beamer the world is your shop window. You can simply take the projector, which is smaller than DIN A4, with you and switch it on immediately with a power supply unit to stage your Full-HD large-screen show wherever you want. Create impressive presentations and share them with others or increase their value in no time at all. Embedded high-speed 5GHz Wi-Fi connectivity lets you transfer or mirror content from your devices to the big screen without a single cable. Accelerate the starting time of the projector. Instant Mode lets you turn on the projector in a snap, just like you're used to on a TV. Thanks to the integrated autofocus and automatic keystone correction, perfect images can be projected in seconds. Whether on the side table in the living room, bedroom or anywhere else, the M2 can deliver perfect images with comprehensive H/V keystone and 4-corner correction. Whether on the side table in the living room, bedroom or anywhere else, the M2 can deliver perfect images with comprehensive H/V keystone and 4-corner correction. The safety and comfort of the users is the highest priority for ViewSonic. With a built-in ultrasonic sensor, the eye protection function automatically cuts off the power to the projection beam when objects are too close to the lens. By using reflective light reflected from the wall or projector screen before it hits your eyes, the projector ensures that the image is virtually free of blue light, penetrates your eyes less intensively, and causes less strain on your eyes for longer periods of time.",
+        "category": "TV + Home cinema",
+        "image": "https://www.digitec.ch/im/Files/3/6/0/4/7/3/1/3/M2_LF01.jpg",
+        "rating": {
+            "rate": 4,
+            "count": 27
+        }
+    },
+    {
+        "id": 24,
+        "title": "Microsoft Surface Pro 8",
+        "price": 849,
+        "description": "Surface Pro 8 combines the power of a laptop with the flexibility of a tablet. And thanks to the legendary kickstand and larger 13-inch touchscreen, you can work from all angles. Annotate, edit, or watch video from any angle. The kickstand has nearly 180 degrees of adjustability - that borders on magic. Immerse yourself in the high-resolution 13-inch PixelSense Flow touch display. Now with up to 120Hz refresh rate and adaptive colors. Experience the remarkable picture quality with Dolby Vision.",
+        "category": "Notebooks + PCs",
+        "image": "https://www.digitec.ch/im/Files/5/2/1/0/0/7/8/9/front.jpg",
+        "rating": {
+            "rate": 4.9,
+            "count": 14
+        }
+    },
+    {
+        "id": 25,
+        "title": "Kingston KC3000",
+        "price": 209,
+        "description": "Kingston KC3000 PCIe 4.0 NVMe M.2 SSD offers the highest level of performance with the Gen 4x4 NVMe controller and 3D TLC NAND. Upgrade your drive memory while improving the reliability of your system to keep up with demanding workloads and achieve better performance in software applications such as 3D rendering and 4K+ content creation. With impressive read and write speeds of up to 7,000MB/s, the drive enhances workflows in powerful desktop and laptop PCs, making it ideal for power users looking for the fastest speeds on the market.",
+        "category": "Storage",
+        "image": "https://www.digitec.ch/im/Files/5/1/1/7/4/8/3/8/ktc-product-ssd-kc3000-512gb-1-zm-lg.jpg",
+        "rating": {
+            "rate": 4.9,
+            "count": 28
+        }
+    },
+    {
+        "id": 26,
+        "title": "Urbanista Miami",
+        "price": 99,
+        "description": "Go on a sound journey with the new, advanced Urbanista Miami over-ear headphones offering up to 50 hours of playtime. Dive deep into your favorite music with Active Noise Cancelling that blocks out surrounding sounds for enhanced focus, immersing you fully in your favourite tunes or podcasts. Stay in the flow with Ambient Sound Mode, advanced technology which filters in important sounds so you can stay alert without having to press pause. Miami headphones is available in four stylish colours inspired by the city’s vibrant pulse.",
+        "category": "Headphones + Headset",
+        "image": "https://www.digitec.ch/im/Files/4/1/5/6/9/3/4/4/44256_1.png",
+        "rating": {
+            "rate": 4.6,
+            "count": 19
+        }
+    },
+    {
+        "id": 27,
+        "title": "HyperX Cloud II",
+        "price": 69.90,
+        "description": "HyperX Cloud II has a newly developed audio control box, which also serves as a USB sound card. It amplifies the audio and voice signal for a perfect hi-fi experience that lets you hear what you've missed. Immerse yourself in a world of details that other players will never know - the rustling boots of a lurking player, a clacking in a distant ventilation shaft. With the independent volume control for audio and microphone, you can adjust not only the sound volume, but also the microphone and effortlessly activate 7.1 surround sound, or turn the microphone on and off. This next-generation headset creates virtual 7.1 surround sound with a three-dimensionality and depth that completes your gaming, movie or music experience. Match your opponents in the game and beat them before they even know what's happening. High-quality audio control box with USB connection and integrated DSP sound card | Hi-Fi-capable 53 mm driver for outstanding audio quality | Hardware-controlled virtual 7.1 surround sound | 100 % comfortable memory foam on the temple and the artificial leather ear pads | Passive noise elimination through closed headphone shells | Optimal for professional players | Compatibility - USB connection for PC and Mac. Jack plug for PS4, Xbox One1 and mobile devices",
+        "category": "Gaming + VR",
+        "image": "https://www.digitec.ch/im/Files/5/2/9/0/0/6/8/81R5uxJuV7L._SL1500_.jpg",
+        "rating": {
+            "rate": 4.5,
+            "count": 1325
         }
     }
 ]
