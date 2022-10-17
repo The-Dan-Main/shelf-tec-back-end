@@ -1,10 +1,13 @@
 const express = require("express")
 const app = express()
 const importData = require("./data.json")
-import cors from "cors"
+
+const cors = require("cors")
 
 
-app.use(cors())
+app.use(cors({
+    origin: "*"
+}))
 
 app.get("/", (req, res) => {
     res.send("hello")
