@@ -1,11 +1,11 @@
 [
     {
         "id": 1,
-        "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-        "price": 109.95,
-        "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-        "category": "men's clothing",
-        "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+        "title": "HP Envy Inspire 7220e",
+        "price": 149.00,
+        "description": "Work, learn and create with a printer that leaves nothing to be desired - whether high-quality photos or crisp documents. Choose HP+ and stay connected and ready to print with the smart printing system virtually anywhere. This is an HP+ enabled printer. Choose HP+ at product setup to take advantage of the benefits. HP+ requires an HP account, an uninterrupted Internet connection, and the exclusive use of Original HP printer cartridges throughout the life of the printer. More information at: http://www.hp.com/plus-faq",
+        "category": "peripherals",
+        "image": "https://www.digitec.ch/im/Files/6/8/6/4/5/0/3/5/image.jpg",
         "rating": {
             "rate": 3.9,
             "count": 120
