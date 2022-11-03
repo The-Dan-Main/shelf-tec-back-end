@@ -3,6 +3,9 @@ const express = require("express");
 const router = express.Router();
 const connection = require("../config")
 
+// Products
+////////////////////////////////////////////////////////////////////////////////
+
 // GET ALL Products         /products
 router.get('', (req, resp) => {
 
@@ -28,7 +31,7 @@ router.get('/:id', (req, resp) => {
 
 
 
-// POST new Product         /products/
+// POST new Product(s)         /products/
 router.post("/", (req, resp) => {
     const formData = req.body;
     // to create a single new product
@@ -67,7 +70,7 @@ router.put("/:id", (req, resp) => {
     const productID = req.params.id;
     const formData = req.body;
 
-    connection.query("UPDATE product SET ? WHERE ?", [formData, productID], (err, res) => {
+    connection.query("UPDATE product SET ? WHERE id =?", [formData, productID], (err, res) => {
         if (err) resp.status(500).json(err)
 
         connection.query("SELECT * FROM product WHERE id = ?", productID, (err, res) => {
@@ -79,7 +82,6 @@ router.put("/:id", (req, resp) => {
 
 
 })
-
 
 
 
@@ -128,6 +130,7 @@ router.delete("/deleteall", (req, resp) => {
         })
     }
 })
+
 
 
 module.exports = router;
