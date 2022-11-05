@@ -7,7 +7,7 @@ const connection = require("../config")
 ////////////////////////////////////////////////////////////////////////////////
 
 // GET ALL Products         /products
-router.get('', (req, resp) => {
+router.get('/', (req, resp) => {
 
     connection.query('SELECT * FROM product', (err, results) => {
         if (err) resp.status(500).json(err)

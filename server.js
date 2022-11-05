@@ -2,7 +2,7 @@ const express = require("express")
 const cors = require("cors")
 const app = express()
 const connection = require("./config");
-const authRouter = require("./routes/auth.route");
+// const authRouter = require("./routes/auth.route");
 const cartRouter = require("./routes/cart.route");
 const ordersRouter = require("./routes/orders.route");
 const productsRouter = require("./routes/products.route");
@@ -37,7 +37,7 @@ app.use(function (req, res, next) {
 
 
 // Routes
-app.use("/auth", authRouter);
+// app.use("/auth", authRouter);
 app.use("/products", productsRouter);
 app.use("/cart", cartRouter);
 app.use("/orders", ordersRouter);
@@ -46,7 +46,7 @@ app.use("/users", usersRouter);
 
 
 // Port and Listener
-const port = 6000;
+const port = 3306;
 app.listen(port, (err) => {
     if (err) throw err;
     console.log(`App is listening at ${port}`);
