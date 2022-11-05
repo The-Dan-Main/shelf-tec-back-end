@@ -47,7 +47,7 @@ app.use("/users", usersRouter);
 
 // Port and Listener
 const port = 3306;
-app.listen(port, (err) => {
+app.listen(process.env.PORT || port , (err) => {
     if (err) throw err;
     console.log(`App is listening at ${port}`);
 });
