@@ -28,9 +28,6 @@
     "mysql2": "^2.3.3",
     "sql": "^0.78.0"
   },
-  "engines": {
-    "node": "18.7.0"
-  },
   "devDependencies": {
     "nodemon": "^2.0.20"
   }
