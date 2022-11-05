@@ -46,7 +46,7 @@ app.use("/users", usersRouter);
 
 
 // Port and Listener
-const port = 5000;
+const port = 6000;
 app.listen(port, (err) => {
     if (err) throw err;
     console.log(`App is listening at ${port}`);
