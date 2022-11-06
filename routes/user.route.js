@@ -24,7 +24,7 @@ router.get('/:user_id', (req, resp) => {
 // GET ALL Users                            /users/:user_id
 router.get('/', (req, resp) => {
     connection.query(`
-    SELECT ID, first_name, last_name FROM User`, (err, res) => {
+    SELECT ID, first_name, last_name, email FROM User`, (err, res) => {
             if (err) resp.status(500).json(err);
             resp.status(200).json(res)
         })
