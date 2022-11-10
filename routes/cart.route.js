@@ -86,9 +86,9 @@ router.put("/:cart_id/products/:product_id", (req, resp) => {
             [product_id],
             (error, results) => {
                 if (error) { 
-                    response.status(500).json(error);
+                    resp.status(500).json(error);
                 } else {
-                    response.status(200).json(results);
+                    resp.status(200).json(results);
                 }
             }
         )

@@ -51,9 +51,6 @@ passport.use(
                 `SELECT *, Cart.id as Cart_id FROM User JOIN Cart on Cart.user_id = User.id WHERE User.email = ?`,
                 email,
                 (err, foundUser) => {
-                    console.log("Password DB",foundUser[0].password)
-                        console.log("Password Input",password)
-                        console.log(bcrypt.compareSync(password, foundUser[0].password))
                     // If generic error return the callback with the error message
                     if (err) return callback(err);
 
@@ -63,8 +60,6 @@ passport.use(
 
                     // If there is a user with that email but password is incorrect
                     if (!bcrypt.compareSync(password, foundUser[0].password)) {
-                        console.log("Password DB",foundUser[0].password)
-                        console.log("Password Input",password)
                         return callback(null, false, {
                             message: "Incorrect password.",
                         });
@@ -116,9 +111,6 @@ router.post("/signup", (req, resp) => {
             }
         });
     });
-    // } catch (err){
-    //     console.log("something went fishy!", err)
-    // }
 });
 
 
