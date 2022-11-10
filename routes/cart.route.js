@@ -80,18 +80,20 @@ router.put("/:cart_id/products/:product_id", (req, resp) => {
         [quantity, product_id, cart_id], (err, res) => {
             if (err) resp.status(500).json(err)
             connection.query(`
-            SELECT *, Cart_Product.id as cart_product_id From Product 
-            JOIN Cart_Product ON Cart_Product.product_id = Product.id 
-            WHERE Cart_Product.id = ?`,
-            [product_id],
-            (error, results) => {
-                if (error) { 
-                    resp.status(500).json(error);
-                } else {
-                    resp.status(200).json(results);
+            SELECT *, Cart_product.id as Cart_Product_id 
+            FROM Cart 
+            JOIN Cart_Product ON Cart_Product.cart_id = Cart.id
+            JOIN Product ON Cart_Product.product_id = Product.id 
+            WHERE Cart.id = ?`,
+                [cart_id],
+                (error, results) => {
+                    if (error) {
+                        resp.status(500).json(error);
+                    } else {
+                        resp.status(200).json(results);
+                    }
                 }
-            }
-        )
+            )
         })
 })
 
