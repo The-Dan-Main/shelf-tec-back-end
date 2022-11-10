@@ -100,12 +100,11 @@ router.post("/signup", (req, resp) => {
     // try {
     bcrypt.hash(req.body.password, 10, (err, hash) => {
         if (err) resp.status(500).json({ error: err.message });
-        
-        const { email, first_name, last_name } = req.body;
-        const formData = [email, hash, first_name, last_name];
-        const sql = `INSERT INTO User SET ?`;
 
-        connection.query(sql, formData, (err, res) => {
+        const { email, first_name, last_name } = req.body;
+        const sql = `INSERT INTO User (email, password, first_name, last_name) VALUES (?,?,?,?)`;
+
+        connection.query(sql, [email, hash, first_name, last_name], (err, res) => {
             if (err) {
                 resp.status(500).json({ error: err.message });
             } else {
