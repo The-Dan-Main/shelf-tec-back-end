@@ -5,7 +5,7 @@ const connection = require("../config");
 const bcrypt = require("bcrypt");
 const flash = require("express-flash");
 const session = require("express-session");
-const secrets = require('./secrets.js');
+const secrets = require("../secrets");
 
 // // jwt strategy modules
 const jwt = require("jsonwebtoken");
