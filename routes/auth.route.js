@@ -51,6 +51,9 @@ passport.use(
                 `SELECT *, Cart.id as Cart_id FROM User JOIN Cart on Cart.user_id = User.id WHERE User.email = ?`,
                 email,
                 (err, foundUser) => {
+                    console.log("Password DB",foundUser[0].password)
+                        console.log("Password Input",password)
+                        console.log(bcrypt.compareSync(password, foundUser[0].password))
                     // If generic error return the callback with the error message
                     if (err) return callback(err);
 
@@ -95,10 +98,11 @@ router.post("/login", function (request, response) {
 // // POST new User            /auth/signup
 router.post("/signup", (req, resp) => {
     // try {
-    const hashedPassword = bcrypt.hash(req.body.password, 10, (err, hash) => {
-
+    bcrypt.hash(req.body.password, 10, (err, hash) => {
+        if (err) resp.status(500).json({ error: err.message });
+        
         const { email, first_name, last_name } = req.body;
-        const formData = [email, hashedPassword, first_name, last_name];
+        const formData = [email, hash, first_name, last_name];
         const sql = `INSERT INTO User SET ?`;
 
         connection.query(sql, formData, (err, res) => {
