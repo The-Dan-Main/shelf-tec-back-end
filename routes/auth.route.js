@@ -77,20 +77,20 @@ passport.use(
     )
 );
 
-// // http://localhost:5000/auth/login
+// // LOGIN                     /auth/login
 router.post("/login", function (request, response) {
-    passport.authenticate(
-        "local",
-        // Passport callback function below
-        (err, user, info) => {
-            if (err) return response.status(500).send(err);
-            if (!user) return response.status(400).json({ message: info.message });
-            // TODO: write env variables for the jwt secret
-            const token = jwt.sign(JSON.stringify(user), secrets.access_Token);
-            const { password, ...foundUser } = user;
-            return response.json({ foundUser, token });
-        }
-    )(request, response);
+    response.status("202").send({message: "route found"})
+    // passport.authenticate(
+    //     "local",
+    //     // Passport callback function below
+    //     (err, user, info) => {
+    //         if (err) return response.status(500).send(err);
+    //         if (!user) return response.status(400).json({ message: info.message });
+    //         const token = jwt.sign(JSON.stringify(user), secrets.access_Token);
+    //         const { password, ...foundUser } = user;
+    //         return response.json({ foundUser, token });
+    //     }
+    // )(request, response);
 });
 
 // // POST new User            /auth/signup
@@ -119,31 +119,6 @@ router.post("/signup", (req, resp) => {
     // }
 });
 
-
-router.post("/signup", (request, response) => {
-    const password = request.body.password;
-    bcrypt.hash(password, 10, (err, hash) => {
-      const { email, name, lastname } = request.body;
-      const formData = [email, hash, name, lastname];
-      const sql =
-        "INSERT INTO User (email, password, name, lastname) VALUES (?,?,?,?)";
-  
-      connection.query(sql, formData, (err, results) => {
-        if (err) {
-          response.status(500).json({ flash: err.message });
-        } else {
-          const newUserId = results.insertId;
-          connection.query("INSERT INTO Cart (user_id) VALUES (?)", newUserId, (error, results) => {
-            if (error) {
-              response.status(500).json({ flash: error.message });
-            } else {
-              response.status(200).json({ flash: "User has been signed up !" });
-            }
-          })
-        }
-      });
-    });
-  });
 
 // // Token middleware
 const authenticateWithJsonWebToken = (request, response, next) => {
