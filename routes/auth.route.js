@@ -94,16 +94,17 @@ router.post("/login", function (request, response) {
 });
 
 // // POST new User            /auth/signup
-router.post("/signup", async (req, resp) => {
-    try {
-        const hashedPassword = await bcrypt.hash(req.body.password, 10)
-        const { email, name, lastname } = req.body;
-        const formData = [email, hashedPassword, name, lastname];
-        const sql = `INSERT INTO User (email, password, name, lastname) VALUES (?,?,?,?)`;
+router.post("/signup", (req, resp) => {
+    // try {
+        const hashedPassword = bcrypt.hash(req.body.password, 10, (err, hash) => {
 
-        connection.query(sql, formData, (err, res) => {
-            if (err) {
-                resp.status(500).json({ error: err.message });
+            const { email, first_name, last_name } = req.body;
+            const formData = [email, hashedPassword, first_name, last_name];
+            const sql = `INSERT INTO User SET ?`;
+            
+            connection.query(sql, formData, (err, res) => {
+                if (err) {
+                    resp.status(500).json({ error: err.message });
             } else {
                 const newUserId = res.insertId;
                 connection.query(`INSERT INTO Cart (user_id) VALUES (?)`, [newUserId], (err, res) => {
@@ -112,10 +113,37 @@ router.post("/signup", async (req, resp) => {
                 })
             }
         });
-    } catch (err){
-        console.log("something went fishy!", err)
-    }
+    });
+    // } catch (err){
+    //     console.log("something went fishy!", err)
+    // }
 });
+
+
+router.post("/signup", (request, response) => {
+    const password = request.body.password;
+    bcrypt.hash(password, 10, (err, hash) => {
+      const { email, name, lastname } = request.body;
+      const formData = [email, hash, name, lastname];
+      const sql =
+        "INSERT INTO User (email, password, name, lastname) VALUES (?,?,?,?)";
+  
+      connection.query(sql, formData, (err, results) => {
+        if (err) {
+          response.status(500).json({ flash: err.message });
+        } else {
+          const newUserId = results.insertId;
+          connection.query("INSERT INTO Cart (user_id) VALUES (?)", newUserId, (error, results) => {
+            if (error) {
+              response.status(500).json({ flash: error.message });
+            } else {
+              response.status(200).json({ flash: "User has been signed up !" });
+            }
+          })
+        }
+      });
+    });
+  });
 
 // // Token middleware
 const authenticateWithJsonWebToken = (request, response, next) => {

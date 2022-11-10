@@ -11,7 +11,7 @@ const connection = require("../config")
 router.get('/:user_id', (req, resp) => {
     const { user_id } = req.params;
     connection.query(`
-    SELECT ID, first_name, last_name, email FROM User
+    SELECT * FROM User
     WHERE user.id = ?`
         , [user_id], (err, res) => {
             if (err) resp.status(500).json(err);
@@ -24,7 +24,7 @@ router.get('/:user_id', (req, resp) => {
 // GET ALL Users                            /users/:user_id
 router.get('/', (req, resp) => {
     connection.query(`
-    SELECT ID, first_name, last_name, email FROM User`, (err, res) => {
+    SELECT * FROM User`, (err, res) => {
             if (err) resp.status(500).json(err);
             resp.status(200).json(res)
         })
