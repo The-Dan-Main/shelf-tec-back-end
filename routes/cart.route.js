@@ -79,16 +79,19 @@ router.put("/:cart_id/products/:product_id", (req, resp) => {
     WHERE product_id = ? AND cart_id = ?`,
         [quantity, product_id, cart_id], (err, res) => {
             if (err) resp.status(500).json(err)
-            console.log(resp)
-            res.affectedRows > 0 ?
-                resp.status(200).json({
-                    message: "The product was successfully updated",
-                    new_quantity: `the new quantity for ID:'${product_id} is now ${quantity}'`
-                })
-                :
-                resp.status(400).json({
-                    message: "The product was not found in the database",
-                })
+            connection.query(`
+            SELECT *, Cart_Product.id as cart_product_id From Product 
+            JOIN Cart_Product ON Cart_Product.product_id = Product.id 
+            WHERE Cart_Product.id = ?`,
+            [product_id],
+            (error, results) => {
+                if (error) { 
+                    response.status(500).json(error);
+                } else {
+                    response.status(200).json(results);
+                }
+            }
+        )
         })
 })
 
