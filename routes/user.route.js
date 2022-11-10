@@ -15,6 +15,7 @@ router.get('/:user_id', (req, resp) => {
     WHERE user.id = ?`
         , [user_id], (err, res) => {
             if (err) resp.status(500).json(err);
+            // TODO: good use of hiding the password here when responding to the frontend
             res.length > 0 ? resp.status(200).json([...res, res.password = "Password is hidden"]) : resp.status(400).json({ message: `User with ID:'${user_id}' does not exists!'` })
         })
 });
@@ -72,6 +73,7 @@ router.put("/:user_id", (req, resp) => {
     const formData = req.body;
     connection.query(`UPDATE user SET ? WHERE id = ?`, [formData, user_id], (err, res) => {
             if (err) resp.status(500).json(err)
+            // TODO: great use of the affected rows to then trigger different responses
             res.affectedRows > 0 ?
                 resp.status(200).json({
                     message: "The user was successfully updated"

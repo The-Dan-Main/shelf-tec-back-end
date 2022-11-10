@@ -1,1 +1,2 @@
+# TODO: do not use commas after the ignored files, instead break them onto new lines
 node_modules, config.js, .env, DB-init.txt

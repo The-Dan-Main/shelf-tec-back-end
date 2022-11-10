@@ -44,10 +44,12 @@ app.use("/orders", ordersRouter);
 app.use("/users", usersRouter);
 
 
-
+// TODO: great setup here for when the port is used up on the server
 // Port and Listener
 const port = 3306;
 app.listen(process.env.PORT || port , (err) => {
     if (err) throw err;
     console.log(`App is listening at ${port}`);
 });
+
+// TODO: Overall the project is well implemented and has a very good structure

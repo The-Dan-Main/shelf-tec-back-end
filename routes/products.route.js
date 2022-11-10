@@ -47,6 +47,7 @@ router.post("/", (req, resp) => {
         })
     }
     // in case multiple new products should be created
+    // TODO: here use the promise all in order to return all of the newly created products at once
     if (formData.length > 1) {
         formData.forEach(item => {
             connection.query('INSERT INTO product set ?', [item], (err, res) => {

@@ -9,6 +9,7 @@ const connection = require("../config")
 router.get('/:cart_id/products', (req, resp) => {
     const { cart_id } = req.params;
 
+    // TODO: Good setup of the select with the joins, it is clear and easy to follow
     connection.query(`
     SELECT *, Cart_product.id as Cart_Product_id 
     FROM Cart 
