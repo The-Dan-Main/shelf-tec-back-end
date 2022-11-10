@@ -8,7 +8,6 @@ const cartRouter = require("./routes/cart.route");
 const ordersRouter = require("./routes/orders.route");
 const productsRouter = require("./routes/products.route");
 const usersRouter = require("./routes/user.route")
-const passport = require("pa")
 
 
 // Data if  SQL is Offline
