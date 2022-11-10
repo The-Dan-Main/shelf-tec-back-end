@@ -15,12 +15,7 @@ const ExtractJWT = require("passport-jwt").ExtractJwt;
 // // Passport modules for local strategy
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
-const initializePassport = require("../passport-config")
-initializePassport(
-    passport, 
-    email => users.find(user => user.email === email),
-    id => users.find(user => user.id === id)
-)
+
 
 passport.use( 
     new JWTStrategy(
