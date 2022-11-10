@@ -60,7 +60,8 @@ passport.use(
 
                     // If there is a user with that email but password is incorrect
                     if (!bcrypt.compareSync(password, foundUser[0].password)) {
-                        console.log(foundUser[0].password)
+                        console.log("Password DB",foundUser[0].password)
+                        console.log("Password Input",password)
                         return callback(null, false, {
                             message: "Incorrect password.",
                         });
