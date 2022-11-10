@@ -98,7 +98,7 @@ router.post("/signup", async (req, resp) => {
         const hashedPassword = await bcrypt.hash(req.body.password, 10)
         const { email, name, lastname } = req.body;
         const formData = [email, hashedPassword, name, lastname];
-        const sql = "INSERT INTO User (email, password, name, lastname) VALUES (?,?,?,?)";
+        const sql = `INSERT INTO User (email, password, name, lastname) VALUES (?,?,?,?)`;
 
         connection.query(sql, formData, (err, res) => {
             if (err) {
