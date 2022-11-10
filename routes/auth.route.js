@@ -3,8 +3,9 @@ const express = require("express");
 const router = express.Router();
 const connection = require("../config");
 const bcrypt = require("bcrypt");
-const flash = require("express-flash")
-const session = require("express-session")
+const flash = require("express-flash");
+const session = require("express-session");
+const secrets = require('../config/secrets.js');
 
 // // jwt strategy modules
 const jwt = require("jsonwebtoken");
@@ -25,7 +26,7 @@ passport.use(
     new JWTStrategy(
         {
             jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
-            secretOrKey: "your_jwt_secret",
+            secretOrKey: secrets.access_Token,
         },
         (jwtPayload, cb) => {
             return cb(null, jwtPayload);
@@ -85,7 +86,7 @@ router.post("/login", function (request, response) {
             if (err) return response.status(500).send(err);
             if (!user) return response.status(400).json({ message: info.message });
             // TODO: write env variables for the jwt secret
-            const token = jwt.sign(JSON.stringify(user), "your_jwt_secret");
+            const token = jwt.sign(JSON.stringify(user), secrets.access_Token);
             const { password, ...foundUser } = user;
             return response.json({ foundUser, token });
         }
@@ -121,7 +122,7 @@ const authenticateWithJsonWebToken = (request, response, next) => {
     if (request.headers.authorization !== undefined) {
         const token = request.headers.authorization.split(' ')[1];
         // TODO: write env variables for the jwt secret
-        jwt.verify(token, "your_jwt_secret", (err, decoded) => {
+        jwt.verify(token, secrets.access_Token, (err, decoded) => {
             if (err) {
                 response
                     .status(401)
