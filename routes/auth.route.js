@@ -74,18 +74,18 @@ passport.use(
 
 // // LOGIN                     /auth/login
 router.post("/login", function (request, response) {
-    response.status("202").send({message: "route found"})
-    // passport.authenticate(
-    //     "local",
-    //     // Passport callback function below
-    //     (err, user, info) => {
-    //         if (err) return response.status(500).send(err);
-    //         if (!user) return response.status(400).json({ message: info.message });
-    //         const token = jwt.sign(JSON.stringify(user), secrets.access_Token);
-    //         const { password, ...foundUser } = user;
-    //         return response.json({ foundUser, token });
-    //     }
-    // )(request, response);
+    // response.status("202").send({message: "route found"})
+    passport.authenticate(
+        "local",
+        // Passport callback function below
+        (err, user, info) => {
+            if (err) return response.status(500).send(err);
+            if (!user) return response.status(400).json({ message: info.message });
+            const token = jwt.sign(JSON.stringify(user), secrets.access_Token);
+            const { password, ...foundUser } = user;
+            return response.json({ foundUser, token });
+        }
+    )(request, response);
 });
 
 // // POST new User            /auth/signup
