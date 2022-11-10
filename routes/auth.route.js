@@ -17,7 +17,7 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 
 
-passport.use( 
+passport.use(
     new JWTStrategy(
         {
             jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
@@ -59,11 +59,13 @@ passport.use(
                         return callback(null, false, { message: "Incorrect email." });
 
                     // If there is a user with that email but password is incorrect
-                    if (!bcrypt.compareSync(password, foundUser[0].password))
-                    console.log(foundUser[0].password)
+                    if (!bcrypt.compareSync(password, foundUser[0].password)) {
+                        console.log(foundUser[0].password)
                         return callback(null, false, {
                             message: "Incorrect password.",
                         });
+
+                    }
 
                     // If password and email is correct send user information to callback
                     return callback(null, foundUser[0]);
@@ -92,15 +94,15 @@ router.post("/login", function (request, response) {
 // // POST new User            /auth/signup
 router.post("/signup", (req, resp) => {
     // try {
-        const hashedPassword = bcrypt.hash(req.body.password, 10, (err, hash) => {
+    const hashedPassword = bcrypt.hash(req.body.password, 10, (err, hash) => {
 
-            const { email, first_name, last_name } = req.body;
-            const formData = [email, hashedPassword, first_name, last_name];
-            const sql = `INSERT INTO User SET ?`;
-            
-            connection.query(sql, formData, (err, res) => {
-                if (err) {
-                    resp.status(500).json({ error: err.message });
+        const { email, first_name, last_name } = req.body;
+        const formData = [email, hashedPassword, first_name, last_name];
+        const sql = `INSERT INTO User SET ?`;
+
+        connection.query(sql, formData, (err, res) => {
+            if (err) {
+                resp.status(500).json({ error: err.message });
             } else {
                 const newUserId = res.insertId;
                 connection.query(`INSERT INTO Cart (user_id) VALUES (?)`, [newUserId], (err, res) => {
