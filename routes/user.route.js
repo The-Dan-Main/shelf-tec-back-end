@@ -38,6 +38,8 @@ router.post('/', (req, resp) => {
     const formData = req.body;
     connection.query('INSERT INTO User SET ?', [formData], (err, res) => {
         if (err) resp.status(500).json(err);
+        // TODO: good use of the insertID to create a new cart with the users newly 
+        // created id
         const newUserId = res.insertId;
         connection.query(`INSERT INTO Cart (user_id) VALUES (?)`, [newUserId], (err, res) => {
             if (err) resp.status(500).json(err);
@@ -54,6 +56,7 @@ router.delete("/:user_id", (req, resp) => {
     connection.query(`DELETE FROM User WHERE ID = ?;`,
         [user_id], (err, res) => {
             if (err) resp.status(500).json(err)
+            // TODO: Great use of affected rows
             res.affectedRows > 0 ?
                 resp.status(200).json({
                     message: "The user was successfully deleted",

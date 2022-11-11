@@ -35,6 +35,8 @@ router.get('/:id', (req, resp) => {
 router.post("/", (req, resp) => {
     const formData = req.body;
     // to create a single new product
+    // TODO: this should be separated into different endpoints as there are two operations here
+    // there should be an endpoint for single and multiple product creation
     if (formData.length <= 1) {
         connection.query('INSERT INTO product set ?', [formData], (err, res) => {
             if (err) resp.status(500).json(err)

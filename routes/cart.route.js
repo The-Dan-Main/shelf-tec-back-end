@@ -81,6 +81,7 @@ router.put("/:cart_id/products/:product_id", (req, resp) => {
         [quantity, product_id, cart_id], (err, res) => {
             if (err) resp.status(500).json(err)
             console.log(resp)
+            // TODO: great use of the message to send back relevant info to the frontend
             res.affectedRows > 0 ?
                 resp.status(200).json({
                     message: "The product was successfully updated",
