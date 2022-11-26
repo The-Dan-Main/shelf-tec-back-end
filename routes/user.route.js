@@ -15,7 +15,7 @@ router.get('/:user_id', (req, resp) => {
     WHERE user.id = ?`
         , [user_id], (err, res) => {
             if (err) resp.status(500).json(err);
-            res.length > 0 ? resp.status(200).json([...res, res.password = "Password is hidden"]) : resp.status(400).json({ message: `User with ID:'${user_id}' does not exists!'` })
+            res.length > 0 ? resp.status(200).json([...res]) : resp.status(400).json({ message: `User with ID:'${user_id}' does not exists!'` })
         })
 });
 

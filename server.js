@@ -3,11 +3,15 @@ const cors = require("cors")
 const app = express()
 const connection = require("./config");
 const secrets = require('./secrets');
+const bodyParser = require("body-parser")
+const nodemailer = require("nodemailer")
+
 const authRouter = require("./routes/auth.route");
 const cartRouter = require("./routes/cart.route");
 const ordersRouter = require("./routes/orders.route");
 const productsRouter = require("./routes/products.route");
 const usersRouter = require("./routes/user.route")
+const emailRouter = require("./routes/email.route")
 
 
 // Data if  SQL is Offline
@@ -43,12 +47,13 @@ app.use("/products", productsRouter);
 app.use("/cart", cartRouter);
 app.use("/orders", ordersRouter);
 app.use("/users", usersRouter);
+app.use("/email", emailRouter);
 
 
 
 // Port and Listener
-const port = 6000;
-app.listen(process.env.PORT || port , (err) => {
+const port = 3000;
+app.listen(process.env.PORT || port, (err) => {
     if (err) throw err;
     console.log(`App is listening at ${port}`);
 });
