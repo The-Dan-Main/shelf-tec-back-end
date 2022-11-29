@@ -1,20 +1,20 @@
-//  Add in the authentication within this file
-const express = require("express");
-const router = express.Router();
-const connection = require("../config");
-const bcrypt = require("bcrypt");
-const flash = require("express-flash");
-const session = require("express-session");
-const secrets = require("../secrets");
+const express = require("express"),
+    router = express.Router(),
+    connection = require("../config"),
+    bcrypt = require("bcrypt"),
+    flash = require("express-flash"),
+    session = require("express-session"),
+    secrets = require("../secrets"),
+    sendEmail = require("../utils/sendEmail")
 
 // // jwt strategy modules
-const jwt = require("jsonwebtoken");
-const JWTStrategy = require("passport-jwt").Strategy;
-const ExtractJWT = require("passport-jwt").ExtractJwt;
+const jwt = require("jsonwebtoken"),
+    JWTStrategy = require("passport-jwt").Strategy,
+    ExtractJWT = require("passport-jwt").ExtractJwt;
 
 // // Passport modules for local strategy
-const passport = require("passport");
-const LocalStrategy = require("passport-local").Strategy;
+const passport = require("passport"),
+    LocalStrategy = require("passport-local").Strategy;
 
 
 passport.use(
@@ -76,7 +76,6 @@ passport.use(
 
 // // LOGIN                     /auth/login
 router.post("/login", function (request, response) {
-    // response.status("202").send({message: "route found"})
     passport.authenticate(
         "local",
         // Passport callback function below
@@ -88,6 +87,54 @@ router.post("/login", function (request, response) {
             return response.json({ foundUser, token });
         }
     )(request, response);
+});
+
+// RESET password           /auth/passwordReset
+router.post("/resetPassword", function (req, resp) {
+    const userEmail = req.body.email,
+        newPassword = req.body.newPassword;
+    passport.authenticate(
+        "local",
+        (err, user, info) => {
+            if (err) resp.status(500).send(err);
+            if (!user) resp.status(400).json({ message: info.message });
+            bcrypt.hash(newPassword, 10, (err, hash) => {
+                connection.query(`UPDATE user SET password = ? WHERE email = ?`, [hash, userEmail], (err, res) => {
+                    if (err) resp.status(500).json(err)
+                    if (res.affectedRows > 0) console.log("update successfully")
+                    const output = `
+                        <body style="margin:0; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu, Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;">
+                            <div style="background-color: #3f5b97; display: flex; gap: 5%; color: #fff; align-items: center;">
+                                <img src="https://i.postimg.cc/qMV77XNC/logo2.png" alt="" width="200" height="120">
+                                <br>
+                                <h1 style="text-decoration: underline;">ShelfTec - User Account Forgotten Passwort </h1>
+                            </div>
+                            <main style="font-size: 18px; padding: 0 10px;">
+                                <br>
+                                <p>
+                                    Dear ${req.body.firstName}, 
+                                    <br><br>
+                                    Thank you plenty for using ShelfTec! The password to your account has been updated.
+                                    <br>
+                                    If you did not update your password by yourself, please get in contact with me! You can just reply to this message for support.
+                                    <br>
+                                    To visit your profile and explore further features, 
+                                    click on the link and get back to <a href="https://shelf-tec.netlify.app">Shelftec.</a> 
+                                    <br>
+                                </p>
+                                <p>Best regards,</p>
+                                <p>Dan Weber - Creator of ShelfTec</p>
+                            </main>
+                        </body>
+                        `;
+
+                    sendEmail("ShelfTec - Password has been reset", output, req.body.email, "'Shelftec' <noreply.shelfec@gmail.com>", "'Shelftec' <noreply.shelfec@gmail.com>")
+                })
+                return resp.json({ message: "Passwort updated and Email succesfully sent!" })
+            }
+            )
+        }
+    )(req, resp);
 });
 
 // // POST new User            /auth/signup
