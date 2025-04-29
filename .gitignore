@@ -1,4 +1,2 @@
-node_modules
-config.js
 .env
-DB-init.txt
+node_modules

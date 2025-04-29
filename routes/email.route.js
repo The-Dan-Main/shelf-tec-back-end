@@ -1,12 +1,12 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
-const connection = require("../config")
-const bcrypt = require("bcrypt");
-const sendEmail = require("../utils/sendEmail")
+const connection = require('../config');
+const bcrypt = require('bcrypt');
+const sendEmail = require('../utils/sendEmail');
 
 // Send Email when a new Account is created     /email/createAccount
-router.post("/createAccount", (req, resp) => {
-    const output = `
+router.post('/createAccount', (req, resp) => {
+  const output = `
     <body style="margin:0; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu, Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;">
         <div style="background-color: #3f5b97; display: flex; gap: 5%; color: #fff; align-items: center;">
             <img src="https://i.postimg.cc/qMV77XNC/logo2.png" alt="" width="200" height="120">
@@ -34,44 +34,51 @@ router.post("/createAccount", (req, resp) => {
         </main>
     </body>
     `;
-    sendEmail("ShelfTec - Created a new Account", output, req.body.email, "'Shelftec' <noreply.shelfec@gmail.com>", "'Shelftec' <noreply.shelfec@gmail.com>")
-    resp.status(200).send({ message: "Email succesfully sent!" })
-})
+  sendEmail(
+    'ShelfTec - Created a new Account',
+    output,
+    req.body.email,
+    "'Shelftec' <noreply.shelfec@gmail.com>",
+    "'Shelftec' <noreply.shelfec@gmail.com>"
+  );
+  resp.status(200).send({ message: 'Email succesfully sent!' });
+});
 
 // Send Email when a user forgot his Password     /email/forgotPassword
-router.post("/forgotPassword", async (req, resp) => {
-    const userEmail = req.body.email;
-    try {
-        connection.query(`SELECT * FROM User WHERE email = ?`, [userEmail], (err, res) => {
-            console.log("firstname:",res[0].first_name)
-            if (err) resp.status(500).json(err);
-            if (res.filter(item => item.email === userEmail).length > 0) {
-                const createNewPassword = () => {
-                    var pass = '';
-                    var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' +
-                        'abcdefghijklmnopqrstuvwxyz0123456789@#$';
+router.post('/forgotPassword', async (req, resp) => {
+  const userEmail = req.body.email;
+  try {
+    connection.query(`SELECT * FROM user WHERE email = ?`, [userEmail], (err, res) => {
+      console.log('firstname:', res[0].first_name);
+      if (err) resp.status(500).json(err);
+      if (res.filter((item) => item.email === userEmail).length > 0) {
+        const createNewPassword = () => {
+          var pass = '';
+          var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' + 'abcdefghijklmnopqrstuvwxyz0123456789@#$';
 
-                    for (let i = 1; i <= 8; i++) {
-                        var char = Math.floor(Math.random()
-                            * str.length + 1);
+          for (let i = 1; i <= 8; i++) {
+            var char = Math.floor(Math.random() * str.length + 1);
 
-                        pass += str.charAt(char)
-                    }
+            pass += str.charAt(char);
+          }
 
-                    return pass;
-                }
-                const newPassword = createNewPassword()
-                bcrypt.hash(newPassword, 10, (err, hash) => {
-                    connection.query(`UPDATE user SET password = ? WHERE email = ?`, [hash, userEmail], (err, res) => {
-                        if (err) resp.status(500).json(err)
-                        res.affectedRows > 0 ?
-                            console.log("update successfully")
-                            :
-                            resp.status(400).json({
-                                message: "user not found",
-                            })
-                    })
-                    const output = `
+          return pass;
+        };
+        const newPassword = createNewPassword();
+        bcrypt.hash(newPassword, 10, (err, hash) => {
+          connection.query(
+            `UPDATE user SET password = ? WHERE email = ?`,
+            [hash, userEmail],
+            (err, res) => {
+              if (err) resp.status(500).json(err);
+              res.affectedRows > 0
+                ? console.log('update successfully')
+                : resp.status(400).json({
+                    message: 'user not found'
+                  });
+            }
+          );
+          const output = `
                         <body style="margin:0; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu, Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;">
                             <div style="background-color: #3f5b97; display: flex; gap: 5%; color: #fff; align-items: center;">
                                 <img src="https://i.postimg.cc/qMV77XNC/logo2.png" alt="" width="200" height="120">
@@ -99,16 +106,22 @@ router.post("/forgotPassword", async (req, resp) => {
                         </body>
                         `;
 
-                    sendEmail("ShelfTec - new temporary Password", output, req.body.email, "'Shelftec' <noreply.shelfec@gmail.com>", "'Shelftec' <noreply.shelfec@gmail.com>")
-                    resp.status(200).send({ message: "Email succesfully sent!" })
-                })
-            } else {
-                resp.status(400).send({ message: "A user with this email addres does not exists yet!" })
-            }
-        })
-    } catch (error) {
-        console.log(error);
-    }
-})
+          sendEmail(
+            'ShelfTec - new temporary Password',
+            output,
+            req.body.email,
+            "'Shelftec' <noreply.shelfec@gmail.com>",
+            "'Shelftec' <noreply.shelfec@gmail.com>"
+          );
+          resp.status(200).send({ message: 'Email succesfully sent!' });
+        });
+      } else {
+        resp.status(400).send({ message: 'A user with this email addres does not exists yet!' });
+      }
+    });
+  } catch (error) {
+    console.log(error);
+  }
+});
 
 module.exports = router;
